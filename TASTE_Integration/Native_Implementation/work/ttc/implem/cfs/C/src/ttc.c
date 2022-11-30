@@ -78,7 +78,7 @@ void ttc_PI_TM_Basic_Task(void)
 {
     asn1SccOperating_Mode curr_mode;
     ttc_RI_Current_Mode(&curr_mode);
-    if (curr_mode == asn1Sccidle) {
+    if (curr_mode == asn1SccOperating_Mode_idle) {
         asn1SccTM_Type tm_hello = pack_TM_hello();
         ttc_RI_TM(&tm_hello);
     }
